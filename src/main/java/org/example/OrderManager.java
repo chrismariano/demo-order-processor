@@ -26,7 +26,7 @@ public class OrderManager {
 
         applyDiscount(orderAmount, customerType);
         double taxedAmount = calculateTax(orderAmount);
-        if (customerType.equals("VIP") && !vipCustomerIds.contains(customerId)) {
+        if (customerType == "VIP" && !vipCustomerIds.contains(customerId)) {
             vipCustomerIds.add(customerId);
         }
         lastOrderAmount = taxedAmount;
